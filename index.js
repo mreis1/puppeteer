@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-let asyncawait = true;
-try {
-  new Function('async function test(){await 1}');
-} catch (error) {
-  asyncawait = false;
-}
+// let asyncawait = true;
+// try {
+//   new Function('async function test(){await 1}');
+// } catch (error) {
+//   asyncawait = false;
+// }
 
-// If node does not support async await, use the compiled version.
-if (asyncawait)
+// // If node does not support async await, use the compiled version.
+// if (asyncawait)
   module.exports = require('./lib/Puppeteer');
-else
-  module.exports = require('./node6/lib/Puppeteer');
+// else
+//   module.exports = require('./node6/lib/Puppeteer');
